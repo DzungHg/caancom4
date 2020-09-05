@@ -1,3 +1,4 @@
+<?php namespace ProcessWire; ?>
 <!-- grid content begin -->
 <div class="uk-grid uk-child-width-1-1 uk-child-width-1-6@m uk-margin-large-top uk-margin-bottom uk-text-center" data-uk-grid>
     <?php

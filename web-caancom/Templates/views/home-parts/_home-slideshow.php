@@ -1,9 +1,10 @@
+<?php namespace ProcessWire; ?>
 <div class="uk-position-relative uk-visible-toggle in-slideshow">
                         <ul class="uk-slideshow-items">
                         <?php
                         $url_image = '';
-                        foreach($page->field_repeater_matrix as $item) {
-                            if($item->type == 'home_slide_show') {
+                        foreach($page->home_repeater_m as $item) {
+                            if($item->type == 'home_slide') {
                                 if ($item->images->count())
                                 {
                                     $url_image = $item->images->first->url();

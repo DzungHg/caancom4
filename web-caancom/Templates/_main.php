@@ -17,44 +17,28 @@ urls()->set('jquery', 'wire/modules/Jquery/JqueryCore/JqueryCore.js');
 <!DOCTYPE html>
 <html lang='en'>
 <head id='html-head'>
-	<!-- Standard Meta -->
-    <meta charset="utf-8">
-    <meta name="description" content="<?=page()->summary?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="theme-color" content="#e47d2e"/> 
-	<!-- Standard Meta -->
- 	<!-- Site Properties -->    
- 	<title><?=page()->title?></title>
-    <link rel="shortcut icon" href="<?=$urls->templates?>styles/images/favicon.ico" type="image/x-icon">
-	<link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
-	<!-- Site Properties --> 
+	<?php // site head
+		echo siteHead(['css'=>array("<?=$urls->templates?>assets/css/uikit.css", "<?=$urls->templates?>assets/css/style.css")]);
+		// echo gwCode( setting('gw-code') ); // Google Webmaster
+	?>
+	
+	
 	 <!-- Google Fonts -->
 	 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla%7cRubik&display=swap">	
 	
-	 <!-- CSS -->
-	<link rel="stylesheet" href="<?=$urls->templates?>styles/css/uikit.css">
-    <link rel="stylesheet" href="<?=$urls->templates?>styles/css/style.css">
-	
-	<!-- default -->
-	<!--<link rel="stylesheet" href="<?=urls()->templates?>styles/main.css"> 
-	
-	<script src="<?=urls()->jquery?>"></script>
-	<script src="<?=urls()->uikit?>js/uikit.min.js"></script>
-	<script src="<?=urls()->uikit?>js/uikit-icons.min.js"></script>
-		-->
-	<!-- defaut -->
+
 </head>
 <body id='html-body'>
 	<div class="in-box-wrapper">
 		<!-- page header -->
-		<?php include("./blocks/_page-header.php"); ?>
+		<?php echo files()->render("./views/template-parts/_page-header.php"); ?>
 		<!-- page header end -->
 		<!-- nội dung từng page render ở đây -->
 		<pw-region id="page-content">
 			
 		</pw-region>
 		<!-- nội dung từng page render ở đây end -->
-		<?php include("./blocks/_page-footer.php"); ?>
+		<?php echo files()->render("./views/template-parts/_page-footer.php"); ?>
 	</div>
 </body>
 </html>

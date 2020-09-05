@@ -7,5 +7,6 @@
 
 /** @var ProcessWire $wire */
 include_once('./_uikit.php');
+include_once('./_func.php');
 include_once('./_myFunc.php'); 
 
