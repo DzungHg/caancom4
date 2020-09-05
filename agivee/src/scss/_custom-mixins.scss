@@ -1,0 +1,238 @@
+// Button size
+@mixin hook-button(){
+    font-family: $base-heading-font-family;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+@mixin hook-button-small(){
+    padding: 0 17px;
+    line-height: 25px;
+    font-size: 12px;
+}
+@mixin hook-button-large(){
+    padding: 0 35px;
+    line-height: 43px;
+}
+
+// Button default
+@mixin hook-button-default(){ 
+    box-shadow: inset 0px 0px 0px 2px $button-default-hover-border;
+}
+
+// Button secondary
+@mixin hook-button-secondary(){
+    padding-left: 18px;
+    padding-right: 18px;
+    border-left: 4px solid $button-primary-background;
+}
+@mixin hook-inverse-button-secondary-hover(){
+    border-color: #fff;
+}
+
+// Label
+@mixin hook-label(){
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: none;
+    border-radius: 4px;
+}
+
+// For label link
+@mixin hook-base-link(){
+    .uk-label:hover {
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+// List divider
+@mixin hook-list-divider(){
+    border-top: $list-divider-border-width dotted $list-divider-border;
+}
+
+// Navigation bar
+@mixin hook-navbar-transparent(){
+    background-image: -webkit-radial-gradient(center bottom, ellipse farthest-corner, rgba(235, 235, 235, 0.8) 0%, rgba(255,255,255,0) 50%);
+    border-bottom: 1px solid #DBDCDE;
+}
+@mixin hook-navbar-nav-item(){
+    font-family: $base-heading-font-family;
+    font-size: 0.941rem;
+    font-weight: 300;
+    text-transform: capitalize;
+    padding: 0 30px;
+    &.uk-icon svg {
+        margin: -3px 0 0 5px;
+    }
+}
+
+// Dot navigation style
+@mixin hook-dotnav-item(){
+    background: #2f3640;
+    border: none;
+    border-radius: 0px;
+}
+@mixin hook-dotnav-item-active(){
+    background-color: $global-theme-color;
+}
+@mixin hook-dotnav-item-hover(){
+    background-color: $global-theme-color;
+}
+
+// Blockquote
+@mixin hook-base-blockquote(){
+    font-family: Georgia, "Times New Roman", serif;
+    color: #666;
+}
+@mixin hook-base-blockquote-footer(){
+    letter-spacing: 1px;
+    color: #666;
+    cite {
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        text-transform: uppercase;
+        line-height: 21px;
+    }
+    &::before { content: "— "; }
+}
+
+// Dropdown navigation bar
+@mixin hook-navbar-dropdown(){
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    padding: 5px 25px 14px 25px;
+    border: 1px solid #DBDCDE;
+    border-top: none;
+    .uk-navbar-dropdown-nav p:first-child {
+        margin-top: 7px;
+    }
+    .uk-navbar-dropdown-nav p {
+        line-height: 24px;
+    }
+    .uk-navbar-dropdown-nav > li > a span.uk-icon svg[data-svg^='fa-'] {
+        margin: -2px 0 0 7px;
+    }
+}   
+@mixin hook-navbar-dropdown-nav-item-hover(){
+    color: #4f4f4f;
+}
+
+// Horizontal rule
+@mixin hook-base-hr(){
+    border-width: 2px;
+}
+
+// Breadcrumb
+@mixin hook-breadcrumb(){
+    > * {
+        font-family: $base-heading-font-family;
+        font-size: $breadcrumb-item-font-size;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #4c4e50;
+    }
+    > li a svg[data-svg^='fa-'] {
+        display: none;
+    }
+}
+@mixin hook-breadcrumb-item(){    
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+@mixin hook-breadcrumb-divider(){
+    font-size: 10px;
+    position: relative;
+    top: -1px;
+}
+
+// Card
+@mixin hook-card(){ 
+    transition: box-shadow 0.1s ease-in-out; 
+    border-radius: 5px;
+}
+@mixin hook-card-default(){ 
+    box-shadow: $card-default-box-shadow;
+    border: 1px solid #e8e8e8;    
+}
+
+// Table
+@mixin hook-table-cell(){
+    vertical-align: middle;
+}
+
+// Form
+@mixin hook-form(){
+    border: $form-border-width solid $form-border;
+    transition: 0.2s ease-in-out;
+    transition-property: color, background-color, border;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+// Drop cap
+@mixin hook-dropcap(){
+    // Prevent line wrap
+    font-family: Georgia, Times, "Times New Roman", serif;
+    margin-bottom: -3px;
+    line-height: 1.1;
+    color: #666;
+}
+
+// Comment
+@mixin hook-comment(){
+    padding-bottom: 40px;
+    border-bottom: 1px solid #dbdbdb;
+}
+@mixin hook-comment-body(){
+    a.uk-link-muted {
+        font-weight: 800;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: $global-theme-color;
+    }
+}
+
+// Accordion
+@mixin hook-accordion-title(){
+    margin-bottom: -10px;
+    padding: 15px 18px;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    overflow: hidden;
+    &::before {
+        width: 20px;
+        height: 20px;    
+        border-radius: 6px;
+        background-size: 50%;
+        background-color: $global-theme-color;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20fill%3D%22%23333333%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20448%20512%22%3E%3Cpath%20d%3D%22M416%20208H272V64c0-17.67-14.33-32-32-32h-32c-17.67%200-32%2014.33-32%2032v144H32c-17.67%200-32%2014.33-32%2032v32c0%2017.67%2014.33%2032%2032%2032h144v144c0%2017.67%2014.33%2032%2032%2032h32c17.67%200%2032-14.33%2032-32V304h144c17.67%200%2032-14.33%2032-32v-32c0-17.67-14.33-32-32-32z%22%2F%3E%3C%2Fsvg%3E");
+        content: "";
+        margin-left: $accordion-icon-margin-left;
+        float: right;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+    .uk-open > &::before { 
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20fill%3D%22%23333333%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20448%20512%22%3E%3Cpath%20d%3D%22M416%20208H32c-17.67%200-32%2014.33-32%2032v32c0%2017.67%2014.33%2032%2032%2032h384c17.67%200%2032-14.33%2032-32v-32c0-17.67-14.33-32-32-32z%22%2F%3E%3C%2Fsvg%3E");
+    }
+}
+@mixin hook-accordion-content(){
+    font-size: 15px;
+    margin: 0px 0 -10px 0;
+    padding: 5px 18px 15px 18px;
+    border: 1px solid #dbdbdb;
+    border-top: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+// Notification
+@mixin hook-notification-message(){
+    border-radius: 5px;
+}
+@mixin hook-nav-primary-item(){
+    font-family: $base-heading-font-family;
+}
+@mixin hook-nav-parent-icon(){
+    margin-top: 8px;
+}

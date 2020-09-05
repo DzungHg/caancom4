@@ -1,0 +1,137 @@
+// Global Color
+$global-theme-color:                        #007CC3 !default;
+$global-secondary-background:               #2f3640 !default;
+$global-muted-background:                   #ebebeb !default;
+$base-body-background:                      #f1f3f4 !default;
+$global-link-color:                         $global-theme-color !default; 
+$global-link-hover-color:                   darken($global-link-color, 12%) !default;
+$global-emphasis-color:                     #8f8f8f !default;
+$global-border:                             #dbdbdb !default;
+
+// Container
+$container-max-width:                       1100px !default;
+
+// Body
+$global-font-family:                        'Karla', sans-serif !default;
+$global-font-size:                          17px !default;
+$global-small-font-size:                    0.824rem !default;
+$base-body-line-height:                     28px !default;
+$global-color:                              #555555 !default;
+$text-large-font-size:                      1.412rem !default;
+$text-lead-font-size:                       $text-large-font-size !default;
+
+// Heading
+$base-heading-font-family:                  'Rubik', sans-serif !default; 
+$base-heading-color:                        #4f4f4f !default;
+$base-heading-font-weight:                  300 !default;
+$base-h1-font-size-m:                       2.471rem !default; 
+$base-h2-font-size-m:                       1.882rem !default; 
+$base-h3-font-size:                         1.412rem !default; 
+$base-h4-font-size:                         1.176rem !default; 
+$base-h5-font-size:                         1rem !default; 
+
+// Button global
+$inverse-global-inverse-color:              #666 !default; //primary button color inverse
+$button-font-size:                          $global-small-font-size !default;
+
+// Button default
+$button-default-background:                 #ffffff !default;
+$button-default-color:                      #4f4f4f !default;
+$button-default-hover-background:           lighten(#ffffff, 32%) !default;
+$button-default-hover-color:                $global-color !default;
+$button-default-active-background:          darken($button-default-hover-background, 5%) !default;
+$button-default-active-color:               $button-default-color !default;
+$button-default-hover-border:               rgba(235, 235, 235, 1) !default;
+
+// Button primary
+$button-primary-background:                 #007CC3 !default;
+$button-primary-color:                      #ffffff !default;
+$button-primary-hover-background:           lighten(#007CC3, 10%) !default;
+$button-primary-hover-color:                $button-primary-color !default;
+$button-primary-active-background:          darken($button-primary-background, 5%) !default;
+$button-primary-active-color:               $button-primary-color !default;
+
+// Button secondary
+$button-secondary-background:               transparent !default;
+$button-secondary-color:                    $button-primary-background !default;
+$button-secondary-hover-background:         $button-secondary-background !default;
+$button-secondary-hover-color:              $button-secondary-color !default;
+$button-secondary-active-background:        darken($button-secondary-background, 5%) !default;
+$button-secondary-active-color:             $button-secondary-color !default;
+$inverse-button-secondary-background:       $button-secondary-background !default;
+$inverse-button-secondary-color:            $button-primary-background !default;
+$inverse-button-secondary-hover-color:      $button-primary-color !default;
+
+// Button text
+$button-text-color:                         $button-default-color !default;
+$button-text-hover-color:                   $global-color !default;
+
+// Button rounded
+$border-rounded-border-radius:              6px !default;
+
+// Blockquote
+$base-blockquote-font-size:                 22px !default;
+$base-blockquote-line-height:               35px !default;
+$base-blockquote-footer-margin-top:         25px !default;
+$base-blockquote-footer-font-size:          13px !default;
+
+// Navigation bar
+$navbar-dropdown-box-shadow:                0 10px 12px rgba(0, 0, 0, 0.15) !default;
+$navbar-nav-item-height:                    50px !default;
+$navbar-nav-item-active-color:              $global-theme-color !default;
+$nav-primary-item-active-color:             $global-theme-color !default;
+$navbar-nav-item-color:                     #555555 !default;
+$navbar-dropdown-margin:                    0px !default;
+
+// Search navbar
+$search-navbar-width:                       212px !default;
+$search-navbar-font-size:                   0.941rem !default;
+
+// Breadcrumb
+$breadcrumb-item-font-size:                 0.706rem !default;
+$breadcrumb-divider-margin-horizontal:      12px !default;
+
+// Card
+$global-medium-box-shadow:                  0 3px 15px rgba(0,0,0,0.08) !default;
+$card-default-color:                        #bcbcbc !default;
+
+// Table
+$table-cell-padding-vertical:               23px !default;
+
+// Form
+$form-large-font-size:                      15px !default;
+$form-large-height:                         46px !default;
+$form-large-padding-horizontal:             18px !default;
+$form-padding-horizontal:                   12px !default;
+
+// Article title
+$article-title-font-size-m:                 32px !default;
+
+// Drop cap
+$dropcap-font-size:                         3.2em !default;
+
+// Dot Nav
+$dotnav-item-width:                         12px !default;
+$dotnav-margin-horizontal:                  8px !default;
+
+// Comment list
+$comment-list-margin-top:                   40px !default;
+$comment-primary-padding:                   0px 0px 40px 0px !default;
+$comment-primary-background:                transparent !default;
+
+// Notification
+$notification-width:                        400px !default;
+$notification-message-font-size:            $global-small-font-size !default;
+
+// Mobile navigation
+$nav-primary-item-hover-color:              #4f4f4f !default;
+$nav-parent-icon-width:                     16px !default;
+$nav-parent-icon-height:                    $nav-parent-icon-width !default;
+$nav-parent-icon-color:                     #00A2FF !default;
+$internal-nav-parent-close-image:           "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20192%20512%22%3E%3Cpath%20d%3D%22M192%20127.338v257.324c0%2017.818-21.543%2026.741-34.142%2014.142L29.196%20270.142c-7.81-7.81-7.81-20.474%200-28.284l128.662-128.662c12.599-12.6%2034.142-3.676%2034.142%2014.142z%22%2F%3E%3C%2Fsvg%3E" !default;
+$internal-nav-parent-open-image:            "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20320%20512%22%3E%3Cpath%20d%3D%22M31.3%20192h257.3c17.8%200%2026.7%2021.5%2014.1%2034.1L174.1%20354.8c-7.8%207.8-20.5%207.8-28.3%200L17.2%20226.1C4.6%20213.5%2013.5%20192%2031.3%20192z%22%2F%3E%3C%2Fsvg%3E" !default;
+
+// Accordion
+$accordion-title-font-size:                 17px !default;
+$accordion-title-color:                     #4f4f4f !default;
+$accordion-title-hover-color:               $accordion-title-color !default;

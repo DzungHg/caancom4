@@ -1,0 +1,32 @@
+.in-icon-wrapper {
+    font-family: 'Libre Franklin', sans-serif;
+    box-sizing: border-box;
+    vertical-align: middle;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    margin-top: -3px;    
+    color: #5c5c5c;
+    &.circle {
+        border-radius: 500px;
+        background: #f0f0f0;
+    }
+    &.small {
+        width: 38px;
+        height: 38px;
+    }
+    &.large {
+        width: 128px;
+        height: 128px;
+    }
+    &.btn-mix {
+        margin-right: -60px;
+        transform: rotate(8deg);
+    }
+    &.btn-mix + .uk-float-left a.uk-button {
+        padding-left: 25px;
+        padding-right: 22px;
+    }
+}

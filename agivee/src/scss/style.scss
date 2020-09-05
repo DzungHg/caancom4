@@ -1,0 +1,75 @@
+@import "_custom-variables.scss";
+/* ------------------------------------------------------------------
+ * File         : style.css
+ * Version      : 1.0
+ * Author       : indonez
+ * Author URI   : http://www.indonez.com
+ *
+ * Indonez Copyright 2019 All Rights Reserved.
+ * ------------------------------------------------------------------
+
+/* Indonez Box Wrapper */
+@import "layouts/_box-wrapper.scss";
+
+/* Indonez Header */
+@import "layouts/_header.scss";
+
+/* Indonez Sticky Menu */
+@import "components/_sticky.scss";
+
+/* Indonez Footer */
+@import "layouts/_footer.scss";
+
+/* Indonez Slideshow */
+@import "components/_slideshow.scss";
+
+/* Indonez breadcrumb */
+@import "components/_breadcrumb.scss";
+
+/* Indonez icon wrapper */
+@import "components/_icon-wrapper.scss";
+
+/* Indonez client logo */
+@import "components/_client-logo.scss";
+
+/* Indonez agivee card */
+@import "components/_agivee-card.scss";
+
+/* Indonez colored card */
+@import "components/_colored-card.scss";
+
+/* Indonez pricing */
+@import "components/_pricing.scss";
+
+/* Indonez testimoni slider */
+@import "components/_testimoni-slider.scss";
+
+/* Indonez customer card */
+@import "components/_customer-card.scss";
+
+/* Indonez roadmap */
+@import "components/_roadmap.scss";
+
+/* Indonez blog */
+@import "layouts/_article.scss";
+
+/* Indonez widget */
+@import "components/_widget.scss";
+
+/* Indonez plyr.io */
+@import "components/_plyr.scss";
+
+/* Indonez totop */
+@import "components/_totop.scss";
+
+/* Indonez blockquote */
+@import "base/_blockquote.scss";
+
+/* Indonez image shadow */
+@import "utils/_img-shadow.scss";
+
+/* uk-accordion remove border bottom */
+@import "utils/_remove-accordion-border.scss";
+
+/* tablet potrait and lower */
+@import "utils/_mediaquery.scss";

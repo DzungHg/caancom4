@@ -1,0 +1,31 @@
+.in-slide-container {
+    .in-slideshow {
+        .uk-light {
+            h1,
+            p {
+                text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+            }
+        }        
+    }
+    .uk-slideshow-items {
+        background: #2f3640;
+    }
+    .uk-slideshow-items li .uk-text-lead {
+        font-size: 22px;
+        color: #808080;
+    }
+    .uk-slideshow-items li .uk-text-small {
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #808080;
+    }
+    .uk-slidenav-container  {
+        background: url(../img/agivee-hexa-pattern.png) repeat;
+        border-bottom: 1px solid #e8e8e8;
+        width: 100%;
+        .uk-slideshow-nav {
+            margin: 6px 20px 6px 0;
+        }
+    }
+} 

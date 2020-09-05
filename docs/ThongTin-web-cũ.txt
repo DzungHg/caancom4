@@ -1,0 +1,23 @@
+-- Web- new3.caan.com.vn
+UN: admin
+PW: Admin@1234
+--
+Database: 
+http://14.225.5.66/phpmyadmin/
+Name: caancomvn_3
+Host:    localhost
+Username:    caancomvn_can
+Password:    AdminCan123$
+====
+Hosting: caancomvn PW:Admin@Can123$
+=======================
+-- Web- caan.com.vn
+UN: admin
+PW: mQaKSvtS7l4QHUHfs)
+--
+Database: (Đã làm rỗng WP trước khi)
+http://14.225.5.66/phpmyadmin/
+Name: caancomvn_can
+Host:    localhost
+Username:    caancomvn_can
+Password:    AdminCan123$

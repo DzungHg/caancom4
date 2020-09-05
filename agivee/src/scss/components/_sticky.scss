@@ -1,0 +1,36 @@
+.in-sticky {  
+    background-color: #f8f8f8;
+    box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.15);
+    height: 70px;
+    .in-header-pattern, .in-header-info, .in-header-logo img {
+        display: none;
+    }
+    .in-header-logo {
+        width: 40px;
+        height: 40px;
+        background: url(../img/logo-alt.svg) no-repeat;
+        margin-top: 13px;
+    }
+    .uk-navbar-transparent {
+        border-bottom: 0px;
+    }
+    .uk-navbar-container {
+        width: 70%;
+        position: relative;
+        top: -60px;
+        float: right;
+    }
+    .uk-navbar-left {
+        margin-left: auto;
+    }
+    .uk-navbar-right {
+        display: none;
+    }
+    .uk-navbar-nav > li {
+        padding-top: 0px;
+        padding-bottom: 7px;
+    }
+    [class*='uk-navbar-dropdown-bottom'] { 
+        margin-top: 7px; 
+    }
+}

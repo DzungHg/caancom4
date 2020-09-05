@@ -1,0 +1,20 @@
+{
+  "name": "agivee-html-template",
+  "version": "2.0.0",
+  "scripts": {
+    "build": "gulp build"
+  },
+  "author": "indonez",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.0",
+    "gulp-jsbeautifier": "^3.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "merge-stream": "^2.0.0"
+  },
+  "dependencies": {
+    "uikit": "^3.2.0"
+  }
+}

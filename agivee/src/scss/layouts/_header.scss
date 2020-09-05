@@ -1,0 +1,35 @@
+header {
+    transition: background-color ease 300ms;
+    .uk-navbar-nav>li:nth-child(n+2):before {
+        content: "";
+        height: 18px;
+        border-right: 1px solid #d4d4d4;
+        position: relative;
+        top: 14px;
+        float: left;
+    }
+    .uk-button-text {
+        margin-right: 20px;
+    }
+    .in-header-socials {
+        margin: 12px 30px 0 0;
+        padding: 0 30px 7px 0;
+        border-right: 1px solid #e8e8e8;
+        a {
+            color: #c0c0c0;
+        }
+    }
+}
+
+.in-header-pattern {
+    background: url(../img/agivee-hexa-pattern.png) repeat;
+    border-bottom: 1px solid #e8e8e8;
+    width: 100%;
+    height: 25px;
+}
+
+.in-header-logo {
+    img {
+        margin: 10px 8px 0 0;
+    }
+}

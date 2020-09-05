@@ -1,0 +1,6 @@
+Xanh: 0 124 195 #007CC3
+Đen: 70% #555555
+Xanh tươi hơn: #00A2FF
+
+Màu back ground web gốc: 47,54,64 #2f3640
+Màu điều chỉnh: 0, 45, 54: #002D40

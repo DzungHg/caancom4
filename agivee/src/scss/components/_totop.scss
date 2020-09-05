@@ -1,0 +1,19 @@
+.in-totop {
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    line-height: 43px;
+    background: #f8f8f8; 
+    position: relative;
+    top: 30px;
+    right: 40px;
+}
+
+a {
+    &.in-totop {
+        color: #65696e;
+    }
+    &:hover.in-totop {
+        color: #9f9f9f;
+    }
+}

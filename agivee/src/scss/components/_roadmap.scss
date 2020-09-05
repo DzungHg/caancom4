@@ -1,0 +1,27 @@
+.in-roadmap {
+    hr {
+        margin-bottom: 0px;
+    }
+    .uk-card-default {
+        border: 2px solid #dbdbdb;
+        border-radius: 6px;
+        box-shadow: none;
+    }
+}
+
+.in-roadmap-branch {
+    .in-icon-wrapper {
+        position: relative;
+        top: 20px;
+        left: 38px;
+    }
+    .in-roadmap-title {
+        height: 98px;
+        border-left: 2px solid #dbdbdb;
+        margin-left: 5px;
+        padding-left: 40px;
+    }
+    .in-roadmap-title span.uk-label {
+        margin-top: -4px;
+    }
+}

@@ -1,0 +1,14 @@
+.in-agivee-card {
+    .uk-card {
+        border: none;
+        box-shadow: none;
+        background: url(../img/agivee-hexa-pattern.png) repeat;
+        border: 1px solid #e8e8e8;
+        .uk-card-body {
+            background: #ffffff;
+            box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.08);
+            border-radius: 4px;
+            margin: 20px;
+        }
+    }    
+}

@@ -1,0 +1,43 @@
+.in-customer-card {
+    background-color: #f8f8f8;
+    border-radius: 4px;
+    .uk-card-header {
+        padding: 30px;
+    }
+    .uk-card-footer {
+        padding: 30px;
+    }
+    .uk-card-body {
+        padding: 20px 30px;
+    }
+    img {
+        margin: 0px;
+    }
+    blockquote {
+        font-size: 18px;
+        line-height: 28px;
+        color: #8f8f8f;
+    }
+    footer span {
+        font-family: 'Libre Franklin', sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        color: #4f4f4f;
+        letter-spacing: 0px;
+    }
+    footer {
+        font-size: 13px;
+        letter-spacing: 1px;
+        line-height: 24px;
+    }
+    cite {
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #bebebe;
+    }
+    &.uk-background-contain {
+        background-size: 55% auto;
+    }
+}

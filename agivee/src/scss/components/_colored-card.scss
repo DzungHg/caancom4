@@ -1,0 +1,71 @@
+.in-colored-card {
+    .uk-card {
+        border: none;
+        box-shadow: none;
+    }
+    .in-icon-wrapper {
+        border-radius: 8px;
+        color: rgba(0, 0, 0, 0.40);
+    }
+    a:hover {
+        text-decoration: none;
+    }
+    h5 {
+        color: rgba(0, 0, 0, 0.60);
+    }
+    h5 span {
+        position: relative;
+        top: -1px;
+    }
+    p {
+        color: rgba(0, 0, 0, 0.50);
+    }
+    &.orange {
+        .uk-card {
+            background-color: #ffeaa7;
+        }
+        .in-icon-wrapper {
+            background-color: #fdcb6e;
+        }
+    }
+    &.green {
+        .uk-card {
+            background-color: #55efc4;
+        }
+        .in-icon-wrapper {
+            background-color: #06caa4;
+        }
+    }
+    &.red {
+        .uk-card {
+            background-color: #fab1a0;
+        }
+        .in-icon-wrapper {
+            background-color: #e88067;
+        }
+    }
+    &.blue {
+        .uk-card {
+            background-color: #81ecec;
+        }
+        .in-icon-wrapper {
+            background-color: #00cec9;
+        }
+    }
+    &.purple {
+        .uk-card {
+            background-color: #b0aafe;
+        }
+        .in-icon-wrapper {
+            background-color: #9184f4;
+        }
+    }
+    &.grey {
+        .uk-card {
+            background-color: #dfe6e9;
+        }
+        .in-icon-wrapper {
+            background-color: #b2bec3;
+        }
+    }
+}

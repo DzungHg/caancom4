@@ -1,0 +1,21 @@
+.in-breadcrumb {
+    padding: 10px 0;
+    border-bottom: 1px solid #DBDCDE;
+    h2 {
+        margin-top: 3px;
+        color: $global-theme-color;
+    }
+    .uk-text-small {
+        margin-top: 0px;
+        line-height: 26px;
+    }
+    .uk-breadcrumb {
+        margin: 19px 0 -25px 0;
+        padding: 0px 15px;
+        background: #fff;
+    }
+    .uk-width-expand p {
+        background: url(../img/agivee-hexa-pattern.png) repeat;
+        padding: 5px 15px;
+    }
+}
