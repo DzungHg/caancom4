@@ -5,7 +5,7 @@
       <div class="uk-section uk-padding-remove-top">
          <div class="uk-container">
                     <!-- breadcrumb content begin -->
-                    <?php include("./blocks/_page-breadcrumb.php"); ?>
+                    <?php include("./views/template-parts/_page-breadcrumb.php"); ?>
                     <!-- breadcrumb content end -->
                      <!-- grid content begin -->
                      <div class="uk-grid">
@@ -37,33 +37,7 @@
                                 -->
                             </aside>                        
                             <!-- side bar và trang con kèm Hết -->
-                            <!-- lãnh vực kinh doanh  --> 
-                             <!-- nếu cho list thì list  -->                       
-                            <aside class="in-blog-sidebar uk-margin-medium-bottom">
                            
-                                <div class='uk-card uk-card-default'>
-                                    <div class='uk-card-body'>
-                                        <h5 class='uk-text-uppercase uk-margin-remove-bottom'>Dịch Vụ & Kinh Doanh</h5>
-                                        <ul class='uk-list uk-list-divider in-widget-category'>
-                                        <?php //chỉ liệt kê mấy cái cho phép liệt kê
-                                            $out = ''; 
-                                            $itemParent = $page->parent();
-                                            foreach ($itemParent->children() as $item)
-                                            {
-                                                if (!$item->business_page_not_in_biz_list == 1)
-                                                {
-                                                    $out .= "<li><a href='$item->url'>$item->title<span class='uk-float-right' data-uk-icon='icon: triangle-right; ratio: 0.9'></span></a></li>";   
-                                                }
-                                            }
-                                            echo $out;
-                                    
-                                        ?>
-                                    </ul> 
-                                    </div>
-                                </div>
-                                
-                            </aside>
-                        <!-- lãnh vực kinh doanh Hết -->
                         </div>
                     </div>
                     <!-- grid content end -->

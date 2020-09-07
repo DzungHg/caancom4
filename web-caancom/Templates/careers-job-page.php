@@ -7,7 +7,7 @@ namespace ProcessWire; ?>
         <div class="uk-section uk-padding-remove-top">
             <div class="uk-container">
                 <!-- breadcrumb content begin -->
-                <?php echo files()->render("views/template-parts/_page-breadcrumb.php"); ?>
+                <?php echo files()->render("./views/template-parts/_page-breadcrumb.php"); ?>
                 <!-- breadcrumb content end -->
                 <!-- grid content begin -->
                 <div class="uk-grid" data-uk-grid>

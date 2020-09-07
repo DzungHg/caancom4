@@ -37,7 +37,7 @@ function siteHead($options = array())
 	$out .= "<title id='title'>$options[title]</title>\n";
 	$out .= "<meta id='description' name='description' content='$options[description]'/>\n";
 	$out .= $options['css']->each("<link rel='stylesheet' href='{value}'>\n");
-	$out .= $options['js']->each("<script src='{value}'></script>\n");
+	//$out .= $options['js']->each("<script src='{value}'></script>\n"); //Tự bỏ bớt
 	$out .= hreflang(page()); // the hreflang parameter
 	$out .= seoPagination(); // seo meta robots ( 'noindex, follow' ) or seo pagination
 

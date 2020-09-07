@@ -1,18 +1,31 @@
 <?php
 
 namespace ProcessWire;
-
+$homeMenu = pages('/');
 $menuTaiNguyen = pages()->get('/tai-nguyen/');
+$menuKinhDoanh = pages()->get('/kinh-doanh/');
 
 ?>
 <nav class="uk-navbar-container uk-navbar-transparent uk-visible@m uk-margin-top uk-margin-bottom" data-uk-navbar>
     <div class="uk-navbar-left">
         <ul class="uk-navbar-nav">
             <li>
-                <a href="/">Trang Chủ</a>
+                <a href="<?=$homeMenu->url?>"><?=$homeMenu->title?></a>
             </li>
             <li>
-                <a href="/kinh-doanh">Kinh Doanh</a>
+            <a href="<?=$menuKinhDoanh->url ?>" data-uk-icon="icon: fa-sort-down; ratio: 0.023"><?=$menuKinhDoanh->title ?></a>
+            <div class="uk-navbar-dropdown">
+                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                        <?php foreach($menuKinhDoanh->children as $item)
+                        {?>
+                            <li><a href="<?=$item->url?>"><?=$item->title?></a></li>
+
+                            <?php
+                        }
+                         ?>
+                        
+                    </ul>
+                </div>
             </li>
             <li>
                 <a href="#" data-uk-icon="icon: fa-sort-down; ratio: 0.023">Công Ty</a>

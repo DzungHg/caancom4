@@ -14,7 +14,7 @@
                         <?=$page->body?>
                     </div>
                     <div>            
-                        <?php echo $forms->embed('job-apply'); ?>
+                        <?=$page->form_hana_code ?>
                     </div>
                 
                 </div>

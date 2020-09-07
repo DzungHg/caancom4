@@ -5,7 +5,7 @@
       <div class="uk-section uk-padding-remove-top">
          <div class="uk-container">
             <!-- breadcrumb content begin -->
-            <?php include("./blocks/_page-breadcrumb.php"); ?>
+            <?php include("./views/template-parts/_page-breadcrumb.php"); ?>
             <!-- breadcrumb content end -->
             <!-- grid content begin -->
             <div class="uk-grid" data-uk-grid>    

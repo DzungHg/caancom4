@@ -39,8 +39,6 @@ setting([
 	'background-image' => true, // Body Background Image
 	// Get Styles: style, và uikit.css mình thêm vô
 	'css-files' => WireArray([
-		urls()->uikit_css,
-		urls('templates') . 'assets/css/custom.css',
 		urls('templates') . 'assets/css/uikit.css',
 		urls('templates') . 'assets/css/style.css'
 	]),
