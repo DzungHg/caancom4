@@ -1,6 +1,7 @@
 <?php
 
 namespace ProcessWire;
+
 $homeMenu = pages('/');
 $menuTaiNguyen = pages()->get('/tai-nguyen/');
 $menuKinhDoanh = pages()->get('/kinh-doanh/');
@@ -10,20 +11,19 @@ $menuKinhDoanh = pages()->get('/kinh-doanh/');
     <div class="uk-navbar-left">
         <ul class="uk-navbar-nav">
             <li>
-                <a href="<?=$homeMenu->url?>"><?=$homeMenu->title?></a>
+                <a href="<?= $homeMenu->url ?>"><?= $homeMenu->title ?></a>
             </li>
             <li>
-            <a href="<?=$menuKinhDoanh->url ?>" data-uk-icon="icon: fa-sort-down; ratio: 0.023"><?=$menuKinhDoanh->title ?></a>
-            <div class="uk-navbar-dropdown">
+                <a href="<?= $menuKinhDoanh->url ?>" data-uk-icon="icon: fa-sort-down; ratio: 0.023"><?= $menuKinhDoanh->title ?></a>
+                <div class="uk-navbar-dropdown">
                     <ul class="uk-nav uk-navbar-dropdown-nav">
-                        <?php foreach($menuKinhDoanh->children as $item)
-                        {?>
-                            <li><a href="<?=$item->url?>"><?=$item->title?></a></li>
+                        <?php foreach ($menuKinhDoanh->children as $item) { ?>
+                            <li><a href="<?= $item->url ?>"><?= $item->title ?></a></li>
 
-                            <?php
+                        <?php
                         }
-                         ?>
-                        
+                        ?>
+
                     </ul>
                 </div>
             </li>
@@ -31,10 +31,10 @@ $menuKinhDoanh = pages()->get('/kinh-doanh/');
                 <a href="#" data-uk-icon="icon: fa-sort-down; ratio: 0.023">Công Ty</a>
                 <div class="uk-navbar-dropdown">
                     <ul class="uk-nav uk-navbar-dropdown-nav">
-                        <li><a href="/cong-ty/ve-ca-an">Về Ca An</a></li>
-
-                        <li><a href="/cong-ty/tuyen-dung">Tuyển Dụng</a></li>
-                        <li><a href="/cong-ty/lien-he">Liên Hệ</a></li>
+                        <li><a href="/cong-ty/ve-ca-an/">Về Ca An</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                        <li><a href="/cong-ty/tuyen-dung/">Tuyển Dụng</a></li>
+                        <li><a href="/cong-ty/lien-he/">Liên Hệ</a></li>
                     </ul>
                 </div>
             </li>

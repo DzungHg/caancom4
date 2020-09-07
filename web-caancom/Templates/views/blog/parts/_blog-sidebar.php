@@ -1,90 +1,60 @@
-<?php namespace ProcessWire;
-
-// translatable " authors " text
-$authText = setting('authors');
-?>
-
-<!-- CATEGORIES -->
 <?php
-$categories = pages()->get("template=blog-categories");
-echo ukNav($categories->children('start=0, limit=9'),
-	[
-		'heading' => ukHeading3($categories->title, ['line' => 'left','class' => 'uk-h2']),
-		'linkClass' => 'uk-button uk-button-text uk-text-left',
-		'maxItems' => 9
-	]);
+
+namespace ProcessWire;
+
+$categories = pages()->get("template=blog-categories")->children();
+$tagClouds = pages()->get("template=blog-tags")->children();
 ?>
+<div class="uk-width-1-1 uk-width-1-3@m in-margin-large-top@s">
+   <aside class="in-blog-sidebar uk-margin-medium-bottom">
+      <form class="uk-search uk-search-default uk-width-1-1">
+         <a href="" class="uk-search-icon-flip" data-uk-search-icon></a>
+         <input class="uk-search-input" type="search" placeholder="Search here...">
+      </form>
+   </aside>
+   <aside class="in-blog-sidebar uk-margin-medium-bottom">
+      <div class="uk-card uk-card-default">
+         <div class="uk-card-body">
+            <h5 class="uk-text-uppercase uk-margin-remove-bottom">Danh Mục</h5>
+            <ul class="uk-list uk-list-divider in-widget-category">
+               <?php foreach ($categories as $item) {
+               ?>
+                  <li><a href="<?= $item->url ?>"><?= $item->title ?><span class="uk-float-right" data-uk-icon="icon: triangle-right; ratio: 0.9"></span></a></li>
+               <?php
+               }
+               ?>
+            </ul>
+         </div>
+      </div>
+   </aside>
 
-<!-- /RECENT POSTS -->
-<?php
-echo ukNav(page()->parent->children('start=0, limit=6'),
-	[
-		'heading' => ukHeading3(setting('recent-posts'), ['line' => 'left','class' => 'uk-h2']),
-		'class' => 'uk-margin-medium-top',
-		'linkClass' => 'uk-button uk-button-text uk-text-left'
-	]);
-?>
-<p>
-	<a class='uk-button uk-button-text uk-text-primary' href='<?=page()->parent->url?>'>
-		<?= setting('more-posts') ?>
-		<?= ukIcon('arrow-right') ?>
-	</a>
-</p>
-
-<!-- ARCHIVES -->
-<?= ukHeading3(setting('archives'), ['line' => 'left', 'class' => 'uk-h2']) ?>
-<ul class="uk-nav uk-nav-default">
-  <?= blogArchive() ?>
-</ul>
-<p>
-	<a class='uk-button uk-button-text uk-text-primary'
-		href='<?= pages()->get("template=blog")->url . sanitizer()->pageName(setting('archives')) . '/' ?>'>
-		<?= setting('archives') ?>
-		<?= ukIcon('arrow-right') ?>
-	</a>
-</p>
-
-<!-- AUTHORS -->
-<?php
-// You should change the authors url slug in the _init.php file ( 'authors' => __('Authors') ) if the page has a different name than the authors
-$authorsUrlSlug = sanitizer()->pageName($authText, true);
-$authUrl = pages()->get("template=blog")->url . $authorsUrlSlug;
-$blogAuthors = users()->find("nick_name!='', nick_pagename!='', start=0, limit=12");
-// $blogAuthors = pages()->find("template=user, nick_name!='', nick_pagename!='', include=all, limit=2");
-?>
-<ul class="uk-nav uk-nav-default uk-margin-medium-top">
-
-	<li class='uk-nav-header'><?= ukHeading3($authText, ['line' => 'left','class' => 'uk-h2']) ?></li>
-		<?php
-			foreach ($blogAuthors as $key => $author):
-				$auth_url = pages()->get("template=blog")->url . $authorsUrlSlug . '/' .  $author->nick_pagename . '/';
-		?>
-	<li>
-		<a class='uk-button uk-button-text uk-text-left'
-			href="<?= $auth_url ?>">
-		/ <?= $author->nick_name ?>
-		</a>
-	</li>
-	<?php endforeach; ?>
-
-	<li class='uk-margin-small-top'>
-		<a class='uk-button uk-button-text uk-text-left uk-text-primary' uk-icon='icon: arrow-right'href='<?= $authUrl ?>/'>
-			<?= $authText ?>
-		</a>
-	</li>
-
-</ul>
-
-<!-- TAGS -->
-<?php
-$tags = pages()->get("template=blog-tags");
-echo ukNav($tags->children('start=0, limit=9'),
-	[
-		'heading' => ukHeading3($tags->title . '/ ', ['line' => 'left','class' => 'uk-h2']),
-		'type' => 'primary',
-		'divider' => false,
-		'class' => 'uk-margin-medium-top uk-flex uk-flex-wrap uk-flex-around uk-flex-middle',
-		'linkClass' => 'uk-button uk-button-text uk-text-left',
-		'maxItems' => 9
-	]);
-
+   <aside class="in-blog-sidebar uk-margin-medium-bottom">
+      <div class="uk-card uk-card-default">
+         <div class="uk-card-body">
+            <h5 class="uk-text-uppercase uk-margin-remove-bottom">Archive</h5>
+            <ul class="uk-list uk-list-divider in-widget-archive">
+               <li><a href="#">July 2019<span class="uk-label uk-float-right">12</span></a></li>
+               <li><a href="#">June 2019<span class="uk-label uk-float-right">24</span></a></li>
+               <li><a href="#">May 2019<span class="uk-label uk-float-right">20</span></a></li>
+               <li><a href="#">April 2019<span class="uk-label uk-float-right">18</span></a></li>
+            </ul>
+         </div>
+      </div>
+   </aside>
+   <aside class="in-blog-sidebar uk-margin-medium-bottom">
+      <div class="uk-card uk-card-default">
+         <div class="uk-card-body">
+            <h5 class="uk-text-uppercase uk-margin-remove-bottom">Tag Cloud</h5>
+            <div class="uk-margin-small-top in-widget-tag">
+               <?php
+               foreach ($tagClouds as $item) {
+               ?>
+                  <a href="<?= $item->url ?>"><span class="uk-label uk-label-success"><?= $item->title ?></span></a>
+               <?php
+               }
+               ?>
+            </div>
+         </div>
+      </div>
+   </aside>
+</div>
