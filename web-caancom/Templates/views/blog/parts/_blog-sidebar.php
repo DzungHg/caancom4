@@ -2,14 +2,17 @@
 
 namespace ProcessWire;
 
+
 $categories = pages()->get("template=blog-categories")->children();
 $tagClouds = pages()->get("template=blog-tags")->children();
+
+$searchPage = pages()->get('template=search')->url;
 ?>
 <div class="uk-width-1-1 uk-width-1-3@m in-margin-large-top@s">
    <aside class="in-blog-sidebar uk-margin-medium-bottom">
-      <form class="uk-search uk-search-default uk-width-1-1">
-         <a href="" class="uk-search-icon-flip" data-uk-search-icon></a>
-         <input class="uk-search-input" type="search" placeholder="Search here...">
+      <form class="uk-search uk-search-default uk-width-1-1" action="<?= $searchPage ?>" method="get">
+         <a href="<?= $searchPage ?>" class="uk-search-icon-flip" data-uk-search-icon></a>
+         <input class="uk-search-input" type="search" name="q" id="q" placeholder="Search here...">
       </form>
    </aside>
    <aside class="in-blog-sidebar uk-margin-medium-bottom">

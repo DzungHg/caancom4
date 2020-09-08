@@ -44,7 +44,7 @@ $siteTagline = $home->summary;
 							<!-- header logo begin -->
 							<div class="uk-grid-collapse" data-uk-grid>
 								<div class="in-header-logo">
-									<a class="uk-logo" href="<?= $urls->root ?>"><img src="<?= $logoUrl ?>" data-src="<?= $logoUrl ?>" width="138" height="72" alt="logo" data-uk-img></a>
+									<a class="uk-logo" href="<?= $home->url ?>"><img src="<?= $logoUrl ?>" data-src="<?= $logoUrl ?>" width="138" height="72" alt="logo" data-uk-img></a>
 								</div>
 							</div>
 							<!-- header logo end -->
