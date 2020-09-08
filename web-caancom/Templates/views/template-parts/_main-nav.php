@@ -65,10 +65,10 @@ $menuKinhDoanh = pages()->get('/kinh-doanh/');
     </div>
     <div class="uk-navbar-right">
         <div>
-            <a class="uk-navbar-toggle" data-uk-search-icon href="#"></a>
+            <a class="uk-navbar-toggle" data-uk-search-icon href="/search/"></a>
             <div class="uk-drop" data-uk-drop="mode: click; pos: left-center; offset: 0">
                 <form class="uk-search uk-search-navbar uk-float-right">
-                    <input class="uk-search-input" type="search" placeholder="Search..." autofocus>
+                    <input class="uk-search-input" name="q" type="search" placeholder="Search..." autofocus >
                 </form>
             </div>
         </div>

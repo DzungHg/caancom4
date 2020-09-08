@@ -1,66 +1,45 @@
 <?php namespace ProcessWire;
 
-$blogPage = pages()->get("template=blog");
 ?>
-<head id='html-head' pw-append>
-<script src='<?= urls('jquery') ?>' defer></script>
-<script src='<?= urls()->FieldtypeComments ?>comments.min.js' defer></script>
-<link rel="stylesheet" href="<?= urls()->FieldtypeComments ?>comments.css">
-</head>
+<pw-region id="page-content">
+    <main>
+        <div class="uk-section uk-padding-remove-top">
+            <div class="uk-container">
+                <!-- breadcrumb content begin -->
+                <?php include("./views/template-parts/_page-breadcrumb.php"); ?>
+                <!-- breadcrumb content end -->
+                <!-- grid content begin -->
+                <div class="uk-grid">
+                    <div class="uk-width-1-1 uk-width-2-3@m">
+					
+						<article class="uk-article in-blog">
+						<p class="uk-article-meta"><span class="uk-label uk-label-warning uk-visible@m"><?= $page->categories->first()->title ?></span> <?= $page->date ?>< &nbsp;&nbsp; | &nbsp;&nbsp; Written by <a href=""><?=  $page->createdUser->nick_name ?></a></p>
+						<h3 class="uk-article-title uk-margin-small-top"><a class="uk-link-reset" href="single.html"><?= $page->title ?></a></h3>
+						<img class="uk-margin-bottom" src="<?= $page->images->first->url ?>" data-src="<?= $page->images->first->url ?>" alt="<?= $page->images->first->description ?>" data-width data-height data-uk-img>
+						<div class="uk-margin-large-left">
+							<div class="uk-margin-small-bottom">
+								<a href="" class="uk-icon-button twitter uk-margin-small-right" data-uk-icon="icon: twitter"></a>
+								<a href="" class="uk-icon-button facebook uk-margin-small-right" data-uk-icon="icon: facebook"></a>
+								<a href="" class="uk-icon-button linkedin uk-margin-small-right" data-uk-icon="icon: linkedin"></a>
+								<a href="" class="uk-icon-button" data-uk-icon="icon: fa-envelope; ratio: 0.028"></a>
+							</div>
+							
+							<?= $page->body ?>
+						
+						</div>
+					</article>
 
-<div id="hero" data-pw-remove></div>
+                            
+                        <hr class="uk-margin-large-top">
+                  
+                    </div>
+                    <!-- sidebar-->
+                    <?php echo files()->include("views/blog/parts/_blog-sidebar.php"); ?>
+                    <!-- sidebar Hết-->
+                </div>
+                <!-- grid content end -->
 
-<p id='site-name'>
-	<a href='<?= $blogPage->url ?>'>
-		<?= $blogPage->title ?>
-		<?= ukIcon('reply', ['ratio' => '2.5', 'class' => 'blog-post-icon']) ?>
-	</a>
-</p>
-
-<div id='content-body' class='-uk-margin-top -uk-margin-bottom'>
-
-	<!-- CONTENT BLOG -->
-	<div class='content-blog' data-uk-grid>
-
-		<!-- CONTENT ARTICLE -->
-		<div class='content-article uk-width-3-4@m'>
-			<?php
-				// blog article
-				echo files()->render('views/blog/parts/_blog-article.php',
-				[
-					'item' => page(),
-					// 'options' => [],
-				]);
-
-				// page links
-				echo files()->render('views/template-parts/_page-links.php');
-
-				// if comments
-				if( setting('comments') ) {
-					include('parts/_blog-comments.php');
-				}
-			?>
-		</div>
-
-		<!-- SIDEBAR -->
-		<div class='content-sidebar uk-width-1-4@m'>
-			<?php include('parts/_blog-sidebar.php') ?>
-		</div>
-
-	</div>
-
-	<!-- PREVIOUS NEXT POST MENU -->
-	<div class="nav-page uk-flex uk-flex-wrap uk-flex-around uk-margin-medium-top uk-margin-small">
-		<?= prNx(page()) ?>
-	</div>
-
-<?php
-// Universal Sharing Buttons ( https://www.addtoany.com/ )
-echo toAny(
-	[
-		'twitter' => true,
-		'facebook' => true,
-		'email' => true
-	])
-?>
-</div>
+            </div>
+        </div>
+    </main>
+</pw-region>

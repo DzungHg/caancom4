@@ -100,6 +100,7 @@ $config->chmodFile = '0644'; // permission for files created by ProcessWire
  * 
  */
 $config->timezone = 'Asia/Ho_Chi_Minh';
+setlocale(LC_ALL, 'en_US.UTF-8');
 
 /**
  * Installer: Admin theme
@@ -121,7 +122,7 @@ $config->installed = 1599217573;
  * Installer: HTTP Hosts Whitelist
  * 
  */
-$config->httpHosts = array('cacom4.caandev.com,caan.com.vn,www.caan.com.vn');
+$config->httpHosts = array('cacom4.caandev.com','caan.com.vn','www.caan.com.vn');
 
 
 /**

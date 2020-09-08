@@ -22,94 +22,30 @@ $defaults = [
 
 // Merge Options
 $options = array_merge($defaults, $options);
+
+//Tạo chuỗi tên danh mục của các post. ???
+
 ?>
 
-<article class='blog-article <?= 'article_' . $item->id ?>'>
-	<header>
-		<?php
-		// if is blog post
-		if ($item->id == page('id')): ?>
-		<h1 class='blog-title uk-text-uppercase uk-h3'>
-			/ <?= $item->title ?>
-		</h1>
+<article class="uk-article in-blog">
+	<p class="uk-article-meta"><span class="uk-label uk-label-warning uk-visible@m"><?= $item->categories->first()->title ?></span> <?= $options['date'] ?>< &nbsp;&nbsp; | &nbsp;&nbsp; Written by <a href=""><?= $options['nick_name'] ?></a></p>
+	<h3 class="uk-article-title uk-margin-small-top"><a class="uk-link-reset" href="single.html"><?= $item->title ?></a></h3>
+	<img class="uk-margin-bottom" src="<?= $item->images->first->url ?>" data-src="<?= $item->images->first->url ?>" alt="<?= $item->images->first->description ?>" data-width data-height data-uk-img>
+	<div class="uk-margin-large-left">
+		<div class="uk-margin-small-bottom">
+			<a href="" class="uk-icon-button twitter uk-margin-small-right" data-uk-icon="icon: twitter"></a>
+			<a href="" class="uk-icon-button facebook uk-margin-small-right" data-uk-icon="icon: facebook"></a>
+			<a href="" class="uk-icon-button linkedin uk-margin-small-right" data-uk-icon="icon: linkedin"></a>
+			<a href="" class="uk-icon-button" data-uk-icon="icon: fa-envelope; ratio: 0.028"></a>
+		</div>
+		<?php if($item->id == page('id')): ?>
+			<?= $item->body ?>
 		<?php else: ?>
-		<h3 class='blog-title uk-button uk-button-text'>
-			<a title="<?= $item->title ?>" class="uk-link-reset" href="<?= $item->url ?>">
-				/ <?= $item->title ?>
-			</a>
-		</h3>
+			<p><?= $item->render('body','text-medium') ?></p>
+			<div>
+				<a href="<?= $item->url ?>" class="uk-button uk-button-link uk-margin-right"><?= setting('read-more') ?> <span data-uk-icon="icon: fa-arrow-right; ratio: 0.027"></span></a>
+			</div>
 		<?php endif; ?>
-
-		<p class="uk-article-meta">
-
-			<a class='uk-button uk-button-text' href="<?= $options['date_archives_url'] ?>">
-				<span data-uk-icon="icon: calendar"></span>
-				<?= $options['date'] ?>
-			</a>
-
-			<!-- <span data-uk-icon="icon: future"></span> Takes 7 min reading. -->
-
-			<?php if($options['nick_pagename']): ?> |
-			<a class='uk-button uk-button-text' href="<?= pages()->get("template=blog")->url . "$options[authors_url_slug]/" . $options['nick_pagename']; ?>/">
-				<span data-uk-icon="icon: user"></span> <?= $options['nick_name'] ?>
-			</a>
-			<?php endif; ?>
-
-			<?php // num comments
-				if ( count($item('comments')) && setting('comments') ):
-					$comments_count = $item->get('comments')->count();
-			?> |
-			<a href='<?=$item->url ?>#comments'>
-				<span data-uk-icon="icon: comments"></span> <?= $comments_count ?>
-			</a>
-			<?php endif; ?>
-		</p>
-	</header>
-
-	<?php if (count($item->images) && $options['disable_img'] == false): ?>
-	<figure class='uk-text-center'>
-		<div class="uk-inline-clip uk-transition-toggle" tabindex="0">
-			<a href="<?= page()->template != 'blog-post' ? $item->url : $item->images->first->url ?>">
-				<img data-src="<?= $item->images->first->url ?>" alt="<?= $item->images->first->description ?: $item->name?>"
-				width='<?= $options['img_width'] ?>' height='<?= $options['img_height'] ?>' data-uk-img>
-				<div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-default uk-flex uk-flex-center uk-flex-middle">
-				</div>
-			</a>
-		</div>
-		<?php if ($item->images->first->description): ?>
-		<figcaption class="uk-padding-small uk-text-center uk-text-muted"><?= $item->images->first->description ?></figcaption>
-		<?php endif; ?>
-	</figure>
-	<?php endif; ?>
-
-	<?php // if is blog post
-		if ($item->id == page('id')):
-	?>
-
-	<?= $item->body ?>
-
-	<footer>
-		<?php if (count($item->categories)): ?>
-		<div class='uk-margin-small'>
-			<span data-uk-icon="icon: hashtag"></span>
-			<?= $item->categories->each("<a class='uk-button uk-button-text' href='{url}'>{title}</a> ") ?>
-		</div>
-		<?php endif; ?>
-
-		<?php if (count($item->tags)): ?>
-		<div>
-			<span data-uk-icon="icon: tag"></span>
-			<?= $item->tags->each("<a class='uk-button uk-button-text' href='{url}'>{title}</a> ") ?>
-		</div>
-		<?php endif; ?>
-	</footer>
-
-	<?php else: ?>
-		<p><?= $item->render('body', 'text-medium') ?></p>
-		<a href="<?= $item->url ?>" title="<?= setting('read-more') ?>" class="uk-button uk-button-text uk-text-large">
-		<?= ukIcon('arrow-right') ?>
-		<?= setting('read-more') ?>
-		</a><hr>
-	<?php endif; ?>
-
+	</div>
 </article>
+

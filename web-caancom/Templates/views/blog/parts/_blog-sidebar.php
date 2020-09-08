@@ -31,19 +31,6 @@ $tagClouds = pages()->get("template=blog-tags")->children();
    <aside class="in-blog-sidebar uk-margin-medium-bottom">
       <div class="uk-card uk-card-default">
          <div class="uk-card-body">
-            <h5 class="uk-text-uppercase uk-margin-remove-bottom">Archive</h5>
-            <ul class="uk-list uk-list-divider in-widget-archive">
-               <li><a href="#">July 2019<span class="uk-label uk-float-right">12</span></a></li>
-               <li><a href="#">June 2019<span class="uk-label uk-float-right">24</span></a></li>
-               <li><a href="#">May 2019<span class="uk-label uk-float-right">20</span></a></li>
-               <li><a href="#">April 2019<span class="uk-label uk-float-right">18</span></a></li>
-            </ul>
-         </div>
-      </div>
-   </aside>
-   <aside class="in-blog-sidebar uk-margin-medium-bottom">
-      <div class="uk-card uk-card-default">
-         <div class="uk-card-body">
             <h5 class="uk-text-uppercase uk-margin-remove-bottom">Tag Cloud</h5>
             <div class="uk-margin-small-top in-widget-tag">
                <?php
