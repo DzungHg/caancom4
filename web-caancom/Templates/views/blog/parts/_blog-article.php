@@ -1,4 +1,6 @@
-<?php namespace ProcessWire;
+<?php
+
+namespace ProcessWire;
 
 // if isset Options from render or included files
 isset($options) ? '' : $options = array();
@@ -17,7 +19,7 @@ $defaults = [
 	// unformatted date from fields ( date )
 	'date' => wireDate('Y/m/d', $item->getUnformatted("date")),
 	'date_archives_url' => pages()->get("template=blog")->url .
-			sanitizer()->pageName(setting('archives')) . '/' . wireDate('Y/m/', $item->getUnformatted("date")),
+		sanitizer()->pageName(setting('archives')) . '/' . wireDate('Y/m/', $item->getUnformatted("date")),
 ];
 
 // Merge Options
@@ -38,14 +40,14 @@ $options = array_merge($defaults, $options);
 			<a href="" class="uk-icon-button linkedin uk-margin-small-right" data-uk-icon="icon: linkedin"></a>
 			<a href="" class="uk-icon-button" data-uk-icon="icon: fa-envelope; ratio: 0.028"></a>
 		</div>
-		<?php if($item->id == page('id')): ?>
-			<?= $item->body ?>
-		<?php else: ?>
-			<p><?= $item->render('body','text-medium') ?></p>
+		<?php if ($item->id != $page->id) : ?>
+			<p><?= $item->render('body', 'text-medium') ?></p>
 			<div>
 				<a href="<?= $item->url ?>" class="uk-button uk-button-link uk-margin-right"><?= setting('read-more') ?> <span data-uk-icon="icon: fa-arrow-right; ratio: 0.027"></span></a>
 			</div>
-		<?php endif; ?>
+		<?php else : ?>
+			<?= $item->body ?>
+		<?php endif ?>
+
 	</div>
 </article>
-
