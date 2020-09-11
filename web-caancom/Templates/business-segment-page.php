@@ -18,7 +18,7 @@ namespace ProcessWire; ?>
                         <!-- sidebar và trang con kèm  -->
                         <aside class="in-blog-sidebar uk-margin-medium-bottom">
                             <p class="uk-text-lead"><?= $page->business_page_cta->head_line ?></p>
-                            <p><?= $page->business_page_cta->short_desc ?> <a href="<?= $page->business_page_cta->link_url ?>" class="uk-button uk-button-link uk-margin-small-top uk-margin-right"><?= $page->business_page_cta->link_name ?><span data-uk-icon="icon: fa-arrow-right; ratio:0.028"></span></a></p>
+                            <p><?= $page->business_page_cta->short_desc ?> <a href="<?= $page->business_page_cta->link_url ?>" class="uk-button uk-button-link uk-margin-small-top uk-margin-right" target="<?= $page->business_page_cta->target_attrib ?>"><?= $page->business_page_cta->link_name ?><span data-uk-icon="icon: fa-arrow-right; ratio:0.028"></span></a></p>
 
                             <?php //Nếu có trang con thì list
                             if ($page->children()->count()) {
