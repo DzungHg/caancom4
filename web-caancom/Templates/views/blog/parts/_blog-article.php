@@ -30,7 +30,7 @@ $options = array_merge($defaults, $options);
 ?>
 
 <article class="uk-article in-blog">
-	<p class="uk-article-meta"><span class="uk-label uk-label-warning uk-visible@m"><?= $item->categories->first()->title ?></span> <?= $options['date'] ?>< &nbsp;&nbsp; | &nbsp;&nbsp; Written by <a href=""><?= $options['nick_name'] ?></a></p>
+	<p class="uk-article-meta"><span class="uk-label uk-label-warning uk-visible@m"><?= $item->categories->first()->title ?></span> <?= $options['date'] ?> &nbsp;&nbsp; | &nbsp;&nbsp; Viết bởi <a href=""><?= $options['nick_name'] ?></a></p>
 	<h3 class="uk-article-title uk-margin-small-top"><a class="uk-link-reset" href="<?= $item->url ?>"><?= $item->title ?></a></h3>
 	<img class="uk-margin-bottom" src="<?= $item->images->first->url ?>" data-src="<?= $item->images->first->url ?>" alt="<?= $item->images->first->description ?>" data-width data-height data-uk-img>
 	<div class="uk-margin-large-left">
