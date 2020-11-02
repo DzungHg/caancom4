@@ -2,7 +2,7 @@
 
 namespace ProcessWire;
 // 
-
+$homeMenu = pages('/');
 ?>
 <header data-uk-sticky="top: 400; cls-active: in-sticky">
     <div class="in-header-pattern uk-margin-bottom"></div>
@@ -13,7 +13,7 @@ namespace ProcessWire;
                     <!-- header logo begin -->
                     <div class="uk-grid-collapse" data-uk-grid>
                         <div class="in-header-logo">
-                            <a class="uk-logo" href="<?= $urls->root ?>"><img src="<?= $urls->templates ?>styles/images/logo.svg" data-src="<?= $urls->templates ?>styles/images/logo.svg" width="138" height="72" alt="logo" data-uk-img></a>
+                            <a class="uk-logo" href="<?= $homeMenu->url; ?>"><img src="<?= $urls->templates ?>styles/images/logo.svg" data-src="<?= $urls->templates ?>styles/images/logo.svg" width="138" height="72" alt="logo" data-uk-img></a>
                         </div>
                     </div>
                     <!-- header logo end -->
