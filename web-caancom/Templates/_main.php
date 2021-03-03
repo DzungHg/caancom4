@@ -79,6 +79,10 @@ $siteTagline = $home->summary;
 		</pw-region>
 		<!-- nội dung từng page render ở đây end -->
 		<?php echo files()->render("views/template-parts/_page-footer.php"); ?>
+		<pw-region id="footer-script">
+			<?php echo files()->render("views/template-parts/_footer-script.php"); ?>
+		</pw-region>
+		
 	</div>
 </body>
 

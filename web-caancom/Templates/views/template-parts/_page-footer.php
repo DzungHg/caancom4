@@ -5,7 +5,7 @@ namespace ProcessWire;
 $logoUrl = pages('options')->logo ? pages('options')->logo->url : '';
 $pageSettings = pages()->get("/cai-dat/");
 ?>
-<footer>
+<footer id="footer">
     <div class="uk-section uk-background-secondary uk-light">
         <div class="uk-container">
             <!-- footer content begin -->
@@ -70,8 +70,3 @@ $pageSettings = pages()->get("/cai-dat/");
         </div>
     </div>
 </footer> <!-- Javascript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.7/js/uikit.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.7/js/uikit-icons.min.js"></script>
-<script src="<?= $urls->templates ?>assets/js/config.js"></script>
-<script src="<?= $urls->templates ?>assets/js/vendor.js"></script>
