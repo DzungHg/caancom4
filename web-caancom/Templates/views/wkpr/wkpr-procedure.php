@@ -8,22 +8,16 @@ namespace ProcessWire;
         <div class="uk-section uk-padding-remove-top">
             <div class="uk-container">
                 <!-- breadcrumb content begin -->
-                <?php include("./views/template-parts/_page-breadcrumb.php"); ?>
+                <?php echo files()->render("views/wkpr/parts/_page-breadcrumb.php"); ?>
                 <!-- breadcrumb content end -->
                 <!-- grid content begin -->
                 <div class="uk-grid">
                     
-                        <?= $page->wkp_html;?>
-
+                    <?= $page->wkp_html;?>
+                    <div> 
                         <hr class="uk-margin-large-top">
-
                     </div>
-                    <!-- sidebar-->
-                    
-                    <!-- sidebar Hết-->
-            
-                <!-- grid content end -->
-
+                </div>
             </div>
         </div>
     </main>

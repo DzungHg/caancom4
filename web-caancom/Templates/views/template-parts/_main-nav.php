@@ -6,6 +6,7 @@ $homeMenu = pages('/');
 $menuTaiNguyen = pages()->get('/tai-nguyen/');
 $menuKinhDoanh = pages()->get('/kinh-doanh/');
 $searchPage = pages()->get('template=search')->url;
+$pageWorkProced = pages("/quy-trinh-caan");
 
 ?>
 <nav class="uk-navbar-container uk-navbar-transparent uk-visible@m uk-margin-top uk-margin-bottom" data-uk-navbar>
@@ -46,9 +47,9 @@ $searchPage = pages()->get('template=search')->url;
                     <div class="uk-navbar-dropdown-grid uk-child-width-1-2" data-uk-grid>
                         <div>
                             <ul class="uk-nav uk-navbar-dropdown-nav">
-
                                 <li><a href="/tai-nguyen/qua-trinh-phat-trien">Quá Trình Phát Triển</a></li>
                                 <li><a href="/tai-nguyen/ho-so-nang-luc">Hồ Sơ Năng Lực</a></li>
+                                <li><a href="<?=$pageWorkProced->url?>"><?=$pageWorkProced->title?></a></li>
                             </ul>
                         </div>
                         <div>

@@ -41,9 +41,9 @@ $menuKinhDoanh = pages()->get('/kinh-doanh/');
 
                 <li class="uk-parent"><a href="#">Tài Nguyên</a>
                     <ul class="uk-nav-sub">
-
                         <li><a href="/tai-nguyen/qua-trinh-phat-trien/">Quá Trình Phát Triển</a></li>
                         <li><a href="/tai-nguyen/ho-so-nang-luc/">Hồ Sơ Năng Lực</a></li>
+                        <li><a href="<?=$pageWorkProced->url?>"><?=$pageWorkProced->title?></a></li>
                     </ul>
                 </li>
             </ul>

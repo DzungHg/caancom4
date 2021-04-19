@@ -51,8 +51,7 @@ $siteTagline = $home->summary;
 						</div>
 						<div class="uk-width-1-2 uk-visible@m in-header-info">
 							<div class="uk-margin-small-top uk-float-right">
-                                <a href="/dang-nhap/?register=1" class="uk-button uk-button-text">Tạo tài khoản</a>
-                                <a href="/dang-nhap" class="uk-button uk-button-default uk-margin-small-left">Đăng nhập</a>
+                                <a href="/dang-nhap/" class="uk-button uk-button-default uk-margin-small-left">Tài Khoản</a>
                             </div>
 
 							<div class="in-header-socials uk-float-right">
